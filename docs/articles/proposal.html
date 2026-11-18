@@ -68,29 +68,15 @@
 
 
 
-    <p>My proposal!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">waterborne</span>, package<span class="op">=</span><span class="st">"finalproject"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cdcmurd</span>, package<span class="op">=</span><span class="st">"finalproject"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">gunleg</span>, package<span class="op">=</span><span class="st">"finalproject"</span><span class="op">)</span></span></code></pre></div>
-</div>
-<section class="level3"><h3 id="requirements">
-<strong>Requirements</strong><a class="anchor" aria-label="anchor" href="#requirements"></a>
-</h3>
-<ul>
-<li>
-</li>
-<li>
-<p>you must provide</p>
-<ul>
-<li><p>full documentation of data provenance</p></li>
-<li><p>descriptive statistics on the variables of interest</p></li>
-<li><p>clear statement of investigative objectives</p></li>
-<li><p>scientific report of findings and limitations</p></li>
-</ul>
-</li>
-</ul></section><script id="quarto-html-after-body" type="application/javascript">
+    <p>To the BST 260 Teaching Team, Fall 2026,</p>
+<p>I’m interested in using NHANES data to understand the effects of socioeconomic factors on disease onset time for diabetes patients. The exposures include household annual income, education, physical activeness, and alcohol consumption. Adjusting for confounding introduced by variables like age, BMI, gender, and race, I am mainly interested in the age, in years, when participants were diagnosed with Diabetes (continuous).</p>
+<p>The analysis will focus on all participants diagnosed with diabetes and have reported the age of disease onset. Diabetes patients without a reported age of onset will be dropped from the analysis. Similarly, patients without information on HHincome, education, physical activeness, and alcohol consumption will be dropped from the current-stage of our analysis.</p>
+<p>To examine alcohol consumption, we will use “Alcohol12PlusYr” as a proxy for a binary variable, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">X_i = 1</annotation></semantics></math> for individuals who reported with smoking history of 12+ years, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> otherwise. Education and household income will be examined as categorical variables. Physical activeness is a self-reported binary variable coded as “yes” or “no” and will remain a binary variable in our analysis. I am hoping to build a regression model to explore potential effects of socioeconomic factors on the time when people develop diabetes. If time allows, I would like to examine if there’s any significant difference in these risk factors, between diabetes and non-diabetes patients.</p>
+<p>Another question that I’m interested in will be based on the waterborne data set. Out of all confirmed waterborne pathogens collected from 2020 to 2023 in Florida, does water exposure have an effect on the number of cases in outbreak? The outcome will be number of cases and I plan to include confounding variables like “setting” and water type, which are both categorical variables.</p>
+
+
+
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
