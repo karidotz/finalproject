@@ -21,42 +21,4 @@ To examine alcohol consumption, we will use "Alcohol12PlusYr" as a proxy for a b
 
 Another question that I'm interested in will be based on the waterborne data set. Out of all confirmed waterborne pathogens collected from 2020 to 2023 in Florida, does water exposure have an effect on the number of cases in outbreak? The outcome will be number of cases and I plan to include confounding variables like "setting" and water type, which are both categorical variables.
 
-```{r}
-waterborne <- bind_rows(waterborne)                       
-waterborne |> group_by(state) |> 
-  summarise(count = n())
-```
 
-```{r eval = FALSE}
-library(NHANES)
-library(dplyr)
-library(srvyr)
-
-z_unlisted = unlist(z)
-data(waterborne, package="finalproject")
-data(cdcmurd, package="finalproject")
-data(gunleg, package="finalproject")
-nhanes <- NHANESraw |> as_tibble() 
-
-nhanes |> 
-  filter(Diabetes=="Yes") |> 
-  filter(is.na(HHIncome)) #207
-nhanes |> 
-  filter(Diabetes=="Yes") |> 
-  filter(is.na(Education)) #44
-
-nhanes |> 
-  filter(Diabetes=="Yes") |> 
-  filter(is.na(PhysActive)) #13
-
-nhanes |> 
-  filter(Diabetes=="Yes") |> 
-  filter(is.na(Alcohol12PlusYr)) #224
-
-nhanes |> filter(Diabetes=="Yes",
-                 !is.na(DiabetesAge),
-                 !is.na(Education),
-                 !is.na(HHIncome), 
-                 !is.na(PhysActive), 
-                 !is.na(Alcohol12PlusYr)) #1108
-```
